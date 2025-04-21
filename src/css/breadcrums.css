@@ -1,0 +1,51 @@
+.breadcrumbs {
+  background-color: #34495E; /* Color de fondo igual al del header */
+  color: white; /* Texto en blanco */
+  padding: 10px 20px; /* Espaciado dentro del contenedor */
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  border-radius: 0; /* Sin bordes redondeados para que se vea parte del header */
+  border: none; /* Eliminar borde */
+  box-shadow: none; /* Sin sombra */
+  margin: 0; /* Eliminar margen para evitar espacio innecesario */
+}
+
+.breadcrumbs a {
+  color: white; /* Color blanco para los enlaces */
+  text-decoration: none;
+  padding: 0; /* Eliminar relleno para que estén pegados */
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline; /* Subrayado en el hover */
+}
+
+.breadcrumbs span {
+  color: white; /* Texto blanco para las secciones de los breadcrumbs */
+  padding: 0; /* Eliminar relleno para que estén pegados */
+}
+
+/* Eliminar margen entre elementos */
+.breadcrumbs span, .breadcrumbs a {
+  margin-right: 0; /* Sin margen entre elementos */
+}
+
+/* Separador entre elementos (opcional, si aún quieres un pequeño separador) */
+.breadcrumbs span::after, .breadcrumbs a::after {
+  content: '>';
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
+}
+
+/* Eliminar separador del último elemento */
+.breadcrumbs span:last-child::after, .breadcrumbs a:last-child::after {
+  content: '';
+}
+
+/* Para los últimos elementos (sin enlace) */
+.breadcrumbs span:last-child {
+  color: #f39c12; /* Color amarillo para el último elemento */
+}
